@@ -13,10 +13,12 @@ local ShowFling = true
 local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local threw = false
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-	if v:IsA("BasePart") and v.Name ~="Head" then 
-		game:GetService("RunService").Heartbeat:connect(function()
-			v.Velocity = Vector3.new(-30,0,0)
-		end)
+	if not v:IsDescendantOf(Rig) then
+		if v:IsA("BasePart") and v.Name ~="Head" then 
+			game:GetService("RunService").Heartbeat:connect(function()
+				v.Velocity = Vector3.new(-30,0,0)
+			end)
+		end
 	end
 end
 A0ThrowArm.Parent = Rig["Right Arm"]
