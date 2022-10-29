@@ -14,9 +14,9 @@ local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local threw = false
 for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
 	if not v:IsDescendantOf(Rig) then
-		if v:IsA("BasePart") and v.Name ~="Head" then 
+		if v:IsA("BasePart") then 
 			game:GetService("RunService").Heartbeat:connect(function()
-				v.Velocity = Vector3.new(-30,0,0)
+				v.Velocity = Vector3.new(-45,0,0)
 			end)
 		end
 	end
