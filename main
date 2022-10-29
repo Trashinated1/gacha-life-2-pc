@@ -1,5 +1,9 @@
 -- hat needed: https://www.roblox.com/catalog/6685365462/Red-Stickman-Head
 -- made by scriptifer#9511
+pcall(function()
+	settings().Physics.AllowSleep = false
+	settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+end)
 local Rig = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lowerrated/immortal/main/main-no-animation"))()
 local ThrowCFrame = CFrame.new(-0.90346241, 0.358176708, 0.845849514, 0.541109383, -0.513258696, -0.666157901, 0.719156563, -0.128184244, 0.682922184, -0.435906649, -0.848607302, 0.299751639)
 local BaseRA_CFrame
