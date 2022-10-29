@@ -122,7 +122,11 @@ apfling.Attachment0 = a0fling
 apfling.Attachment1 = A0Ball
 apfling.Responsiveness = 200
 apfling.MaxForce = math.huge
-Mouse.Button1Down:Connect(throw)
+Mouse.Button1Down:Connect(function()
+	if Mouse.Target then
+		throw()
+	end
+end)
 Mouse.KeyDown:Connect(function(key)
 	if string.lower(key) == "e" then
 		if threw then
